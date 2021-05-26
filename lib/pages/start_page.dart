@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_application/pages/home_page.dart';
+import 'package:food_application/themes/colors.dart';
 
 class Startpage extends StatefulWidget {
   @override
@@ -89,7 +90,7 @@ class _StartpageState extends State<Startpage> {
                   width: 163,
                   height: 56,
                   decoration: BoxDecoration(
-                    color: Color(0xFFBF941A),
+                    color: primary,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Material(

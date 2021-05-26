@@ -1,4 +1,5 @@
 const List category = [
+  "All",
   "Indomie Kuah",
   "Indomie Goreng",
   "Snack",
@@ -7,45 +8,45 @@ const List category = [
 
 const List menu = [
   {
-    "img": "",
+    "img": "assets/images/image_1.jpg",
     "name": "Indomie Goreng with red chillies",
-    "price": "35000",
+    "price": "35.000",
     "rate": "4.5"
   },
   {
-    "img": "",
+    "img": "assets/images/image_2.jpg",
     "name": "Indomie Kuah with curry",
-    "price": "25000",
+    "price": "25.000",
     "rate": "4.5"
   },
   {
-    "img": "",
+    "img": "assets/images/image_3.jpg",
     "name": "Indomie Kuah soto lamongan",
-    "price": "35000",
+    "price": "35.000",
     "rate": "4.5"
   },
   {
-    "img": "",
+    "img": "assets/images/image_4.jpg",
     "name": "Indomie Kuah Baso",
-    "price": "35000",
+    "price": "35.000",
     "rate": "4.5",
   },
   {
-    "img": "",
+    "img": "assets/images/image_5.jpg",
     "name": "Indomie Goreng Ayam",
-    "price": "35000",
+    "price": "35.000",
     "rate": "4.5",
   },
   {
-    "img": "",
+    "img": "assets/images/image_6.jpg",
     "name": "Nasi Goreng Pak Haji Asep",
-    "price": "35000",
+    "price": "35.000",
     "rate": "4.5"
   },
   {
-    "img": "",
+    "img": "assets/images/image_1.jpg",
     "name": "Nasi Uduk Bah ocim",
-    "price": "35000",
+    "price": "35.000",
     "rate": "4.5",
   },
 ];
