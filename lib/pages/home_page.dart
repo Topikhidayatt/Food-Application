@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:food_application/json/home_page_data.dart';
+import 'package:food_application/pages/detail_product_page.dart';
 import 'package:food_application/themes/colors.dart';
-import 'package:intl/intl.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -27,15 +27,25 @@ class _HomePageState extends State<HomePage> {
           children: [
             IconButton(
               onPressed: () {},
-              icon: SvgPicture.asset("assets/images/home.svg", width: 30,),
+              icon: SvgPicture.asset(
+                "assets/images/home.svg",
+                width: 30,
+              ),
             ),
             IconButton(
               onPressed: () {},
-              icon: SvgPicture.asset("assets/images/shopping-cart.svg", width: 30, color: Colors.white,),
+              icon: SvgPicture.asset(
+                "assets/images/shopping-cart.svg",
+                width: 30,
+                color: Colors.white,
+              ),
             ),
             IconButton(
               onPressed: () {},
-              icon: SvgPicture.asset("assets/images/user.svg", width: 30,),
+              icon: SvgPicture.asset(
+                "assets/images/user.svg",
+                width: 30,
+              ),
             )
           ],
         ),
@@ -46,10 +56,9 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget getBody() {
-    int selectedCategory = 0;
     var size = MediaQuery.of(context).size;
     return Padding(
-      padding: EdgeInsets.only(top: 40, left: 16, right: 15, bottom: 16),
+      padding: EdgeInsets.only(top: 40, left: 16, right: 15, bottom: 100),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -167,63 +176,76 @@ class _HomePageState extends State<HomePage> {
           SizedBox(height: 20),
           Wrap(
             alignment: WrapAlignment.center,
-              spacing: size.width * 0.1,
-              children: List.generate(menu.length, (index) {
-                return Padding(
-                  padding: EdgeInsets.only(top: 15),
-                  child: Container(
-                    width: size.width * 0.4,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Column(
-                      children: [
-                        Container(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Image(
-                              image: AssetImage(menu[0]['img']),
-                              fit: BoxFit.cover,
+            spacing: size.width * 0.1,
+            children: List.generate(
+              menu.length,
+              (index) {
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return DetailProduct(menu[index]);
+                    }));
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Container(
+                      width: size.width * 0.4,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image(
+                                image: AssetImage(menu[index]['img']),
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          menu[0]['name'],
-                          style: TextStyle(fontWeight: FontWeight.w300),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "IDR " + menu[0]['price'],
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: Container(
-                                width: 23,
-                                height: 23,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: primary,
-                                ),
-                                child: Center(
-                                  child: Icon(Icons.add,
-                                      size: 23, color: Colors.white),
+                          SizedBox(height: 10),
+                          Text(
+                            menu[index]['name'],
+                            style: TextStyle(fontWeight: FontWeight.w300),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "IDR " + menu[index]['price'],
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ],
+                              IconButton(
+                                onPressed: () {},
+                                icon: Container(
+                                  width: 23,
+                                  height: 23,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: primary,
+                                  ),
+                                  child: Center(
+                                    child: Icon(Icons.add,
+                                        size: 23, color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );
-              })),
+              },
+            ),
+          ),
         ],
       ),
     );
