@@ -1,16 +1,28 @@
-# food_application
 
-A new Flutter project.
+# Indomie Application Food
 
-## Getting Started
+This application is the result of collaboration with  [@davit-coder](https://www.github.com/davit-coder)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+[![Whats-App-Image-2021-06-07-at-05-49-06-2.jpg](https://i.postimg.cc/FzJ1HG6j/Whats-App-Image-2021-06-07-at-05-49-06-2.jpg)](https://postimg.cc/kRq7jNq4)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[![Whats-App-Image-2021-06-07-at-05-49-06-1.jpg](https://i.postimg.cc/3Rk22X6w/Whats-App-Image-2021-06-07-at-05-49-06-1.jpg)](https://postimg.cc/TLXy6DT8)
+
+[![Whats-App-Image-2021-06-07-at-05-49-06.jpg](https://i.postimg.cc/Sxm8gF53/Whats-App-Image-2021-06-07-at-05-49-06.jpg)](https://postimg.cc/6y1yQSBf)
+
+  
+## Authors
+
+- Design - [@davit-coder](https://www.github.com/davit-coder) 
+- More design - [@davit-coder](https://www.github.com/davit-coder) https://dribbble.com/shots/15515668-Food-App-Indomie-IOS-App
+
+
+  
+## Tech Stack
+
+**Client:** Flutter 
+
+
+  
